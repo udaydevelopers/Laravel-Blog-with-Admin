@@ -10,6 +10,9 @@
         </div>
         
    <div class="col-md-9">
+    @if(Session::has('deleted_user'))
+    <p class="bg bg-danger">{{ session('deleted_user') }}</p>
+    @endif
    	<h2>Users</h2>
    	@if($users)
    <table class="table">

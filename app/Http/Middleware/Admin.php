@@ -20,7 +20,6 @@ class Admin
         if(Auth::check())
         {   
             
-           // var_dump(Auth::user()->role); die;
             if(Auth::user()->isAdmin() == true)
             {  
                 return $next($request);
