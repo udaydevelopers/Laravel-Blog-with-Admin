@@ -29,10 +29,10 @@
     	@foreach($posts as $post)
       <tr>
         <td>{{ $post->id }}</td>
-        <td><img height="60" src="{{ $post->photo_id ? $post->photo_id : 'http://via.placeholder.com/450X450' }}"></td>
+        <td><img height="60" src="{{ $post->photo_id ? $post->photo->file : 'http://via.placeholder.com/450X450' }}"></td>
         <td><a href="{{ route('admin.posts.edit', $post->id) }}">{{ $post->title }}</a></td>
         <td>{{ $post->body }}</td>
-        <td>{{ $post->category_id }}</td>
+        <td>{{ $post->category ? $post->category->name : 'Un Categorized'}}</td>
         <td>{{ $post->user->name }}</td>
         <td>{{ $post->created_at->diffForHumans() }}</td>
         <td>{{ $post->updated_at->diffForHumans() }}</td>

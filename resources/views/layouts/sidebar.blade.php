@@ -1,23 +1,39 @@
-
-
-                    
-
-
-                    <div class="widget">
-                        <div class="widget-heading">
-                            <h4>Menu</h4>
-                        </div>
-                        <div class="widget-body">
-                            <ul class="tags">
-                                <li><a href="{{ route('admin.users.index') }}">List Users</a></li>
-                                <li><a href="{{ route('admin.users.create') }}">Create User</a></li>
-                                <li><a href="#">List Categories</a></li>
-                                <li><a href="#">Create Categories</a></li>
-                                <li><a href="{{ route('admin.posts.index') }}">List Posts</a></li>
-                                <li><a href="{{ route('admin.posts.create') }}">Create Post</a></li>
-                                <li><a href="#">Change Password</a></li>
-                                <li><a href="#">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>
- 
+<div class="container">
+    <div class="col-sm-3">
+  <h2>Admin Menu</h2>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th><a href="/admin">Dashboard</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="{{ route('admin.users.index') }}">List Users</a></td>
+      </tr>
+      <tr>
+        <td><a href="{{ route('admin.users.create') }}">Create User</a></td>
+      </tr>
+      <tr>
+        <td><a href="{{ route('admin.posts.index') }}">List Posts</a></td>
+      </tr>
+      <tr>
+        <td><a href="{{ route('admin.posts.create') }}">Create Post</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">List Categories</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">Create Category</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">Change Password</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">Logout</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+    
