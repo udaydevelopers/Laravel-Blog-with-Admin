@@ -24,7 +24,7 @@
         <td><a href="{{ route('admin.categories.index') }}">List Categories</a></td>
       </tr>
       <tr>
-        <td><a href="{{ route('admin.categories.create') }}">Create Category</a></td>
+        <td><a href="{{ route('admin.categories.index') }}">Create Category</a></td>
       </tr>
       <tr>
         <td><a href="#">Change Password</a></td>
