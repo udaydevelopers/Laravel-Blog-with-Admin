@@ -10,6 +10,9 @@
         </div>
         
    <div class="col-md-9">
+     @if(Session::has('deleted_post'))
+    <p class="bg bg-danger">{{ session('deleted_post') }}</p>
+    @endif
    	@if($posts)
 <h1>Posts</h1>
 <table class="table">
@@ -31,7 +34,7 @@
         <td>{{ $post->id }}</td>
         <td><img height="60" src="{{ $post->photo_id ? $post->photo->file : 'http://via.placeholder.com/450X450' }}"></td>
         <td><a href="{{ route('admin.posts.edit', $post->id) }}">{{ $post->title }}</a></td>
-        <td>{{ $post->body }}</td>
+        <td>{{ str_limit($post->body, 30) }}</td>
         <td>{{ $post->category ? $post->category->name : 'Un Categorized'}}</td>
         <td>{{ $post->user->name }}</td>
         <td>{{ $post->created_at->diffForHumans() }}</td>

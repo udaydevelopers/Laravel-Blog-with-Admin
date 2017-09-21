@@ -21,10 +21,10 @@
         <td><a href="{{ route('admin.posts.create') }}">Create Post</a></td>
       </tr>
       <tr>
-        <td><a href="#">List Categories</a></td>
+        <td><a href="{{ route('admin.categories.index') }}">List Categories</a></td>
       </tr>
       <tr>
-        <td><a href="#">Create Category</a></td>
+        <td><a href="{{ route('admin.categories.create') }}">Create Category</a></td>
       </tr>
       <tr>
         <td><a href="#">Change Password</a></td>
